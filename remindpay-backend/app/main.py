@@ -13,7 +13,11 @@ app = FastAPI(title="RemindPay API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://remind-pay.vercel.app",
+        "https://remind-pay-hnvi.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
