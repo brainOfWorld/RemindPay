@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd remindpay-frontend && npm install && npm run build",
-  "outputDirectory": "remindpay-frontend/.next",
-  "framework": "nextjs",
-  "installCommand": "cd remindpay-frontend && npm install"
-}
