@@ -1,0 +1,15 @@
+{
+  "name": "remindpay",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd remindpay-frontend && npm run dev",
+    "build": "cd remindpay-frontend && npm install && npm run build",
+    "start": "cd remindpay-frontend && npm start"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
