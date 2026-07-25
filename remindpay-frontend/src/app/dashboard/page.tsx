@@ -13,7 +13,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      router.push("/login");
+      window.location.href = "/login";
       return;
     }
     fetchStats();

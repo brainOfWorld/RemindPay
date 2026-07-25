@@ -25,8 +25,13 @@ export default function LoginPage() {
         : { email, password };
 
       const res = await api.post(endpoint, payload);
-      localStorage.setItem("token", res.data.access_token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
+      const data = res.data;
+      if (data.access_token) {
+        localStorage.setItem("token", data.access_token);
+      }
+      if (data.user) {
+        localStorage.setItem("user", JSON.stringify(data.user));
+      }
       router.push("/dashboard");
     } catch (err: any) {
       setError(err.response?.data?.detail || "Something went wrong");
